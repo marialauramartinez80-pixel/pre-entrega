@@ -1,0 +1,202 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Google Fonts */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* HEADER Y NAVEGACIÓN */
+.header-principal {
+    background: linear-gradient(135deg, #4a154b, #6b1170); /* Background Degradado */
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-lista {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-lista a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-lista a:hover {
+    color: #e0aaff;
+}
+
+/* SECCIÓN HERO / INICIO */
+.hero-section {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.multimedia-container {
+    max-width: 700px;
+    margin: 1.5rem auto 0;
+}
+
+/* SECCIÓN PRODUCTOS (FLEXBOX) */
+.seccion-productos {
+    padding: 3rem 1.5rem;
+    background-color: #f1f3f5;
+    text-align: center;
+}
+
+.contenedor-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* Mantiene la adaptabilidad responsiva */
+    margin-top: 2rem;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 280px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.card button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #6b1170;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* SECCIÓN RESEÑAS (GRID) */
+.seccion-resenas {
+    padding: 3rem 1.5rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.grid-resenas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Distribución lógica en Grid */
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+}
+
+.card-resena {
+    background: #f8f0fc;
+    padding: 1.5rem;
+    border-left: 4px solid #6b1170;
+    border-radius: 6px;
+    text-align: left;
+}
+
+.card-resena span {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #6b1170;
+}
+
+/* SECCIÓN CONTACTO (FORMULARIO) */
+.seccion-contacto {
+    padding: 3rem 1.5rem;
+    background-color: #f1f3f5;
+    text-align: center;
+}
+
+.formulario-contacto {
+    max-width: 500px;
+    margin: 2rem auto 0;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.campo-form label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.campo-form input, 
+.campo-form textarea {
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.btn-enviar {
+    padding: 0.8rem;
+    background-color: #6b1170;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer-principal {
+    background-color: #212529;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES (RESPONSIVE CONTACTO Y HEADER) */
+@media (max-width: 768px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-lista {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+    }
+
+    .formulario-contacto {
+        width: 100%;
+        padding: 1.2rem;
+    }
+}
